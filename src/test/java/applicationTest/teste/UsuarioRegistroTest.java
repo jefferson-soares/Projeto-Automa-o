@@ -25,9 +25,6 @@ public class UsuarioRegistroTest {
 
         assertEquals("Register", navegador.getTitle(), "O título da página não corresponde ao esperado");
 
-
-
-
-        navegador.close();
+        //navegador.close();
     }
 }
