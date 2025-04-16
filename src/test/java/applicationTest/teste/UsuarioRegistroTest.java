@@ -1,8 +1,8 @@
 package applicationTest.teste;
 
-
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -21,10 +21,17 @@ public class UsuarioRegistroTest {
         //Navegando até a página de registro do site proposto
         navegador.get("https://demo.automationtesting.in/Register.html");
 
+        //Pegando o Título da página
         navegador.getTitle();
 
+        //Validar o Título da página
         assertEquals("Register", navegador.getTitle(), "O título da página não corresponde ao esperado");
 
+        navegador.findElement(By.cssSelector("input[placeholder='First Name']")).sendKeys("Jefferson");
+
+        navegador.findElement(By.xpath("//input[@placeholder='Last Name']")).sendKeys("Soares");
+
+        //Fechar navegador
         //navegador.close();
     }
 }
