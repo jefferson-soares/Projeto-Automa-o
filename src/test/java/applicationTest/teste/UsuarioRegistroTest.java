@@ -31,6 +31,14 @@ public class UsuarioRegistroTest {
 
         navegador.findElement(By.xpath("//input[@placeholder='Last Name']")).sendKeys("Soares");
 
+        //está com erro validar depois
+        //navegador.findElement(By.xpath("//textarea[@class='form-control ng-pristine ng-valid ng-touched']")).sendKeys("Teste para validar xxpto");
+
+        navegador.findElement(By.cssSelector("input[type='email']")).sendKeys("teste@gmail.com");
+
+        navegador.findElement(By.cssSelector("input[type='tel']")).sendKeys("619827884");
+        
+
         //Fechar navegador
         //navegador.close();
     }
